@@ -1,13 +1,13 @@
-import React, {useState}  from "react";
+import React, { useState } from "react";
+import { LinkParser } from './parsers'
 
 const App = () => {
-
   const [link, setLink] = useState<string>('')
 
   const parseLink = (event: React.FormEvent<HTMLFormElement>) => {
 
     event.preventDefault()
-    console.log(link)
+    LinkParser(link)
   }
 
   return (
