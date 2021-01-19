@@ -1,20 +1,23 @@
-import React from "react";
+import React, {useState}  from "react";
 
 const App = () => {
-  const [count, setCount] = React.useState<number>(0);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((count) => count + 1);
-    }, 500);
-    return () => clearInterval(interval);
-  }, []);
+  const [link, setLink] = useState<string>('')
 
-  function displayCount(message: string): string {
-    return message;
+  const parseLink = (event: React.FormEvent<HTMLFormElement>) => {
+
+    event.preventDefault()
+    console.log(link)
   }
 
-  return <h2>{displayCount(`Count: ${count}`)}</h2>;
+  return (
+    <form onSubmit={(event) => parseLink(event)}>
+      <input
+        type='text'
+        onChange={(event) => setLink(event.target.value)}/>
+      <button type='submit'>Parse</button>
+    </form>
+  );
 };
 
 export default App;
