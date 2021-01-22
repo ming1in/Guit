@@ -24,8 +24,17 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@types/cheerio": "^0.22.23",
+    "@types/request-promise": "^4.1.47",
     "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "fs": "^0.0.1-security",
+    "net": "^1.0.2",
+    "puppeteer": "^5.5.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "tls": "^0.0.1"
   }
 }
